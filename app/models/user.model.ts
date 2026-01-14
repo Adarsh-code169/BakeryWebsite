@@ -32,3 +32,7 @@ const userSchema = new mongoose.Schema<IUser>({
         ,enum:["user","admin","deliveryBoy"],default:"user"}
 
 },{timestamps:true});
+
+const User=mongoose.models.User || mongoose.model("User",userSchema);
+ 
+export default User;   
